@@ -1,0 +1,28 @@
+Sales Data (FY2024)
+Month,Product A,Product B,Product C
+Jan,100,200,150
+Feb,120,180,160
+Mar,110,220,170
+Total,330,600,480
+
+Inventory List
+Item,Quantity,Unit Price,Amount
+Apple,50,100,5000
+Orange,80,80,6400
+Banana,30,120,3600
+
+Simple Table (No Header)
+100,200,300
+150,250,350
+200,300,400
+
+Notes Data
+ID,Content
+1,This is a test
+2,Multi-row test
+Remarks,No special notes
+
+Name,Age,City
+Alice,25,Tokyo
+Bob,30,Osaka
+Charlie,28,Nagoya
