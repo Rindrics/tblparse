@@ -221,3 +221,50 @@ export function analyzeBlockStructure(
 
 	return { titleRow, headerRow, dataRows };
 }
+
+/**
+ * Load a worksheet from file data
+ *
+ * @param data - File data (ArrayBuffer, string, etc.)
+ * @param type - Data type (default: "array" for ArrayBuffer)
+ * @returns First worksheet from the workbook
+ * @throws Error if workbook contains no sheets
+ */
+export function loadSheet(
+	data: ArrayBuffer | string | Uint8Array,
+	type: "array" | "string" | "buffer" = "array",
+): XLSX.WorkSheet {
+	const workbook = XLSX.read(data, { type });
+
+	if (!workbook.SheetNames || workbook.SheetNames.length === 0) {
+		throw new Error("Workbook contains no sheets");
+	}
+
+	return workbook.Sheets[workbook.SheetNames[0]];
+}
+
+/**
+ * Extract cell data from a block as a 2D string array
+ *
+ * @param sheet - Excel worksheet
+ * @param block - Table block to extract data from
+ * @returns 2D array of cell values
+ */
+export function extractBlockData(
+	sheet: XLSX.WorkSheet,
+	block: TableBlock,
+): string[][] {
+	const data: string[][] = [];
+
+	for (let row = block.startRow; row <= block.endRow; row++) {
+		const rowData: string[] = [];
+		for (let col = 0; col < block.maxColumnCount; col++) {
+			const cellAddress = XLSX.utils.encode_cell({ r: row - 1, c: col });
+			const cell = sheet[cellAddress];
+			rowData.push(cell?.v !== undefined ? String(cell.v) : "");
+		}
+		data.push(rowData);
+	}
+
+	return data;
+}

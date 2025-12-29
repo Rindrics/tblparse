@@ -13,6 +13,8 @@ import {
 	detectHeaderRow,
 	detectTableBlocks,
 	detectTitleRow,
+	extractBlockData,
+	loadSheet,
 } from "./table-block";
 
 /**
@@ -216,6 +218,76 @@ describe("table-block", () => {
 			const blocks = detectTableBlocks(emptySheet);
 
 			expect(blocks.length).toBe(0);
+		});
+	});
+
+	describe("loadSheet", () => {
+		it("should load sheet from string data", () => {
+			const csvContent = "A,B,C\n1,2,3\n4,5,6";
+			const sheet = loadSheet(csvContent, "string");
+
+			expect(sheet).toBeDefined();
+			expect(sheet["!ref"]).toBeDefined();
+			expect(sheet.A1?.v).toBe("A");
+			expect(sheet.B2?.v).toBe(2);
+		});
+
+		it("should load first sheet from workbook", () => {
+			const fixturePath = path.join(
+				__dirname,
+				"__fixtures__",
+				"sample-tables.csv",
+			);
+			const content = fs.readFileSync(fixturePath, "utf-8");
+			const sheet = loadSheet(content, "string");
+
+			expect(sheet).toBeDefined();
+			expect(sheet.A1?.v).toBe("Sales Data (FY2024)");
+		});
+	});
+
+	describe("extractBlockData", () => {
+		it("should extract cell data as 2D string array", () => {
+			const blocks = detectTableBlocks(sheet);
+			const data = extractBlockData(sheet, blocks[0]);
+
+			// First block: Sales Data (6 rows, 4 columns)
+			expect(data.length).toBe(6);
+			expect(data[0]).toEqual(["Sales Data (FY2024)", "", "", ""]);
+			expect(data[1]).toEqual(["Month", "Product A", "Product B", "Product C"]);
+			expect(data[2]).toEqual(["Jan", "100", "200", "150"]);
+		});
+
+		it("should handle block with varying column counts", () => {
+			const blocks = detectTableBlocks(sheet);
+			const data = extractBlockData(sheet, blocks[2]);
+
+			// Third block: Simple Table (No Header)
+			// Title row has 1 column, data rows have 3 columns
+			expect(data[0]).toEqual(["Simple Table (No Header)", "", ""]);
+			expect(data[1]).toEqual(["100", "200", "300"]);
+		});
+
+		it("should return empty strings for empty cells", () => {
+			const blocks = detectTableBlocks(sheet);
+			const data = extractBlockData(sheet, blocks[0]);
+
+			// Title row only has first column filled
+			expect(data[0][1]).toBe("");
+			expect(data[0][2]).toBe("");
+			expect(data[0][3]).toBe("");
+		});
+
+		it("should work with loadSheet output", () => {
+			const csvContent = "Header1,Header2\nValue1,Value2";
+			const sheet = loadSheet(csvContent, "string");
+			const blocks = detectTableBlocks(sheet);
+			const data = extractBlockData(sheet, blocks[0]);
+
+			expect(data).toEqual([
+				["Header1", "Header2"],
+				["Value1", "Value2"],
+			]);
 		});
 	});
 });

@@ -1,1 +1,4 @@
-console.log("Hello from muramasa!");
+/**
+ * @rindrics/tblparse - Table block detection library
+ */
+export * from "./table-block";

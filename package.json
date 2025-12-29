@@ -12,7 +12,16 @@
 		"test": "bun test",
 		"prepare": "husky"
 	},
-	"keywords": [],
+	"keywords": [
+		"table",
+		"parser",
+		"excel",
+		"csv",
+		"xlsx",
+		"spreadsheet",
+		"block-detection",
+		"data-extraction"
+	],
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
