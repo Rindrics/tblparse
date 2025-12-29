@@ -1,1 +1,1 @@
-export * from "./table-block";
+export * from "./table-block.js";
