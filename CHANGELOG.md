@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.5](https://github.com/Rindrics/muramasa/compare/v0.0.4...v0.0.5) - 2025-12-29
+- fix: env -> with by @Rindrics in https://github.com/Rindrics/muramasa/pull/14
+
 ## [v0.0.4](https://github.com/Rindrics/muramasa/compare/v0.0.3...v0.0.4) - 2025-12-29
 - chore: add repository field by @Rindrics in https://github.com/Rindrics/muramasa/pull/12
 
