@@ -27,10 +27,13 @@ jobs:
 
       - name: Build
         run: bun run build
+        working-directory: packages/core
 
       - name: Test
         run: bun test
+        working-directory: packages/core
 
       - name: Publish to npm with provenance
         run: npm publish --access public --provenance
+        working-directory: packages/core
 
