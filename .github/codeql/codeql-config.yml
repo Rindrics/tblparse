@@ -1,7 +1,9 @@
 name: "CodeQL config for tblparse"
 
 paths:
-  - src
+  - packages/core/src
+  - apps/demo/src
 
 paths-ignore:
-  - node_modules/
+  - "**/node_modules/"
+  - "**/dist/"
