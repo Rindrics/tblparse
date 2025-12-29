@@ -37,13 +37,7 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: |
-          if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
-            bun install
-          else
-            bun install --frozen-lockfile
-          fi
+      - run: bun install --frozen-lockfile
 
       - name: Biome check
         run: bun run check
@@ -57,13 +51,7 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: |
-          if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
-            bun install
-          else
-            bun install --frozen-lockfile
-          fi
+      - run: bun install --frozen-lockfile
 
       - name: Build core
         run: bun run --cwd packages/core build
@@ -78,13 +66,7 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: |
-          if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
-            bun install
-          else
-            bun install --frozen-lockfile
-          fi
+      - run: bun install --frozen-lockfile
 
       - name: Build core (dependency)
         run: bun run --cwd packages/core build
@@ -101,13 +83,7 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: |
-          if [ "${{ github.actor }}" = "dependabot[bot]" ]; then
-            bun install
-          else
-            bun install --frozen-lockfile
-          fi
+      - run: bun install --frozen-lockfile
 
       - name: Test core
         run: bun run --cwd packages/core test
