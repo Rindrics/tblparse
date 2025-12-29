@@ -10,8 +10,7 @@
 		"declaration": true,
 		"declarationMap": true,
 		"outDir": "./dist",
-		"rootDir": "./src",
-		"types": ["bun-types"]
+		"rootDir": "./src"
 	},
 	"include": ["src/**/*"],
 	"exclude": ["src/**/*.test.ts", "node_modules", "dist"]
