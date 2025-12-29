@@ -33,25 +33,27 @@ function App() {
 		const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
 		// Parse all sheets
-		const sheetsData: SheetData[] = workbook.SheetNames.map((sheetName: string) => {
-			const sheet = workbook.Sheets[sheetName];
-			const detectedBlocks = detectTableBlocks(sheet);
+		const sheetsData: SheetData[] = workbook.SheetNames.map(
+			(sheetName: string) => {
+				const sheet = workbook.Sheets[sheetName];
+				const detectedBlocks = detectTableBlocks(sheet);
 
-			const blocks = detectedBlocks.map((block) => {
-				const structure = analyzeBlockStructure(block);
-				const data = extractBlockData(XLSX, sheet, block);
+				const blocks = detectedBlocks.map((block) => {
+					const structure = analyzeBlockStructure(block);
+					const data = extractBlockData(XLSX, sheet, block);
+					return {
+						block,
+						title: structure.titleRow?.labelValue,
+						data,
+					};
+				});
+
 				return {
-					block,
-					title: structure.titleRow?.labelValue,
-					data,
+					name: sheetName,
+					blocks,
 				};
-			});
-
-			return {
-				name: sheetName,
-				blocks,
-			};
-		});
+			},
+		);
 
 		setSheets(sheetsData);
 		setActiveSheet(0);
