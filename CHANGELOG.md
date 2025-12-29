@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.0.7](https://github.com/Rindrics/tblparse/compare/v0.0.6...v0.0.7) - 2025-12-29
+- feat: restructure to monorepo with demo app by @Rindrics in https://github.com/Rindrics/tblparse/pull/5
+- ci: allow edits on lockfile on CI by @Rindrics in https://github.com/Rindrics/tblparse/pull/24
+- fix: ESM module resolution by adding explicit .js extension by @Rindrics in https://github.com/Rindrics/tblparse/pull/25
+- Revert "fix: correct tagpr version file path" by @Rindrics in https://github.com/Rindrics/tblparse/pull/27
+- docs: add badges by @Rindrics in https://github.com/Rindrics/tblparse/pull/29
+- Revert "ci: allow edits on lockfile on CI" by @Rindrics in https://github.com/Rindrics/tblparse/pull/31
+- chore: remove apps from workspace by @Rindrics in https://github.com/Rindrics/tblparse/pull/32
+- ci: configure watched file by @Rindrics in https://github.com/Rindrics/tblparse/pull/33
+
 ## [v0.0.6](https://github.com/Rindrics/muramasa/compare/v0.0.5...v0.0.6) - 2025-12-29
 - chore: adjust build config by @Rindrics in https://github.com/Rindrics/muramasa/pull/16
 
