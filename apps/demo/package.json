@@ -9,10 +9,9 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@rindrics/tblparse": "workspace:*",
+		"@rindrics/tblparse": "^0.0.6",
 		"react": "^19.1.0",
-		"react-dom": "^19.1.0",
-		"xlsx": "^0.18.5"
+		"react-dom": "^19.1.0"
 	},
 	"devDependencies": {
 		"@types/react": "^19.1.6",

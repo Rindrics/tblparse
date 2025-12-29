@@ -17,10 +17,9 @@
       "name": "@rindrics/tblparse-demo",
       "version": "0.0.0",
       "dependencies": {
-        "@rindrics/tblparse": "workspace:*",
+        "@rindrics/tblparse": "^0.0.6",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
-        "xlsx": "^0.18.5",
       },
       "devDependencies": {
         "@types/react": "^19.1.6",
@@ -32,7 +31,7 @@
     },
     "packages/core": {
       "name": "@rindrics/tblparse",
-      "version": "0.0.0",
+      "version": "0.0.5",
       "dependencies": {
         "xlsx": "^0.18.5",
       },
@@ -555,6 +554,8 @@
     "yocto-queue": ["yocto-queue@1.2.2", "", {}, "sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ=="],
 
     "@commitlint/is-ignored/semver": ["semver@7.7.3", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q=="],
+
+    "@rindrics/tblparse-demo/@rindrics/tblparse": ["@rindrics/tblparse@0.0.6", "", { "dependencies": { "xlsx": "^0.18.5" } }, "sha512-0YFoaXVPzWNZqYSLy0dbEjoTpLICTnVZhxFgBoe26J8Lsq2EypYGGOwgdKG6XXzw3OacyrecKTePvFbZWphLTw=="],
 
     "import-fresh/resolve-from": ["resolve-from@4.0.0", "", {}, "sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g=="],
 
