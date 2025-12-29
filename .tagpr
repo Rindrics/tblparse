@@ -3,6 +3,6 @@
 
 [tagpr]
 
-versionFile = "packages/core/src/package.json"
+versionFile = "packages/core/package.json"
 	vPrefix = true
 	releaseBranch = main
