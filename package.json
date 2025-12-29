@@ -3,6 +3,10 @@
 	"version": "0.0.2",
 	"description": "",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Rindrics/muramasa"
+	},
 	"scripts": {
 		"dev": "bun run src/index.ts",
 		"build": "bun build src/index.ts --outdir dist --target node",
