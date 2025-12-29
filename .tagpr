@@ -3,3 +3,5 @@
 
 [tagpr]
 versionFile = "package.json"
+	vPrefix = true
+	releaseBranch = main
