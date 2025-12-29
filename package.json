@@ -4,8 +4,7 @@
 	"type": "module",
 	"description": "Table parsing library monorepo",
 	"workspaces": [
-		"packages/*",
-		"apps/*"
+		"packages/*"
 	],
 	"scripts": {
 		"dev": "bun run --cwd apps/demo dev",
