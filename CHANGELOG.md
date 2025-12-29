@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.6](https://github.com/Rindrics/muramasa/compare/v0.0.5...v0.0.6) - 2025-12-29
+- chore: adjust build config by @Rindrics in https://github.com/Rindrics/muramasa/pull/16
+
 ## [v0.0.5](https://github.com/Rindrics/muramasa/compare/v0.0.4...v0.0.5) - 2025-12-29
 - fix: env -> with by @Rindrics in https://github.com/Rindrics/muramasa/pull/14
 
