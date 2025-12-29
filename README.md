@@ -1,5 +1,9 @@
 # tblparse
 
+[![npm version](https://badge.fury.io/js/@rindrics%2Ftblparse.svg)](https://badge.fury.io/js/@rindrics%2Ftblparse)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 A library for detecting and parsing table blocks from Excel/CSV files.
 
 ## Demo
