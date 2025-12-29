@@ -1,15 +1,26 @@
 {
 	"name": "@rindrics/tblparse",
 	"version": "0.0.5",
-	"description": "",
+	"description": "Table block detection library for Excel/CSV files",
 	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Rindrics/muramasa"
 	},
 	"scripts": {
 		"dev": "bun run src/index.ts",
-		"build": "bun build src/index.ts --outdir dist --target node",
+		"build": "tsc --project tsconfig.build.json",
 		"lint": "biome lint src",
 		"format": "biome format src --write",
 		"check": "biome check src",
