@@ -33,7 +33,7 @@ function App() {
 		const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
 		// Parse all sheets
-		const sheetsData: SheetData[] = workbook.SheetNames.map((sheetName) => {
+		const sheetsData: SheetData[] = workbook.SheetNames.map((sheetName: string) => {
 			const sheet = workbook.Sheets[sheetName];
 			const detectedBlocks = detectTableBlocks(sheet);
 
