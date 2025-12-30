@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.8](https://github.com/Rindrics/tblparse/compare/v0.0.7...v0.0.8) - 2025-12-30
+- chore: use xlsx v0.20.3 to avoid CVE-2023-30533 by @Rindrics in https://github.com/Rindrics/tblparse/pull/34
+
 ## [v0.0.7](https://github.com/Rindrics/tblparse/compare/v0.0.6...v0.0.7) - 2025-12-29
 - feat: restructure to monorepo with demo app by @Rindrics in https://github.com/Rindrics/tblparse/pull/5
 - ci: allow edits on lockfile on CI by @Rindrics in https://github.com/Rindrics/tblparse/pull/24
