@@ -1,6 +1,6 @@
 {
 	"name": "@rindrics/tblparse",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"description": "Table block detection library for Excel/CSV files",
 	"type": "module",
 	"repository": {
