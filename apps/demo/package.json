@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@rindrics/tblparse": "^0.0.6",
+		"@rindrics/tblparse": "^0.0.9",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
 		"xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
