@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.10](https://github.com/Rindrics/tblparse/compare/v0.0.9...v0.0.10) - 2025-12-30
+- chore: use tblparse v0.0.9 to avoid CVE-2023-30533 by @Rindrics in https://github.com/Rindrics/tblparse/pull/38
+
 ## [v0.0.9](https://github.com/Rindrics/tblparse/compare/v0.0.8...v0.0.9) - 2025-12-30
 - chore: use xlsx v0.20.3 to avoid CVE-2023-30533 by @Rindrics in https://github.com/Rindrics/tblparse/pull/36
 
